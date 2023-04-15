@@ -1,6 +1,6 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { LoginForm } from "../types/types";
+import { LoginForm } from "../types/login";
 
 export default function Home() {
   const { control, handleSubmit, getValues } = useForm<LoginForm>();
