@@ -8,9 +8,16 @@ export const fetchUser = async (id: string | string[]) => {
   return response.json();
 };
 
-export const UpdateUser = async (id: string | string[], lastName: string) => {
+export const UpdateUser = async (
+  id: string | string[],
+  firstName: string,
+  lastName: string
+) => {
   const data = {
+    id: id,
+    firstName: firstName,
     lastName: lastName,
+    password: "Passw0rd",
   };
 
   headers.append("Content-Type", "application/json");

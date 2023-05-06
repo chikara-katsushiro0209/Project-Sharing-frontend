@@ -10,7 +10,7 @@ const Index = () => {
     firstName: "",
     lastName: "",
     birthday: 0,
-    email: "",
+    password: "Passw0rd",
   });
 
   const router = useRouter();
@@ -37,7 +37,7 @@ const Index = () => {
 
   const userUpdate = () => {
     console.log("test");
-    UpdateUser(id, "chimmy")
+    UpdateUser(id, user.firstName, user.lastName)
       .then((data) => {
         console.log(data);
       })
