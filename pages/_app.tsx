@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import { createGlobalStyle } from "styled-components";
+import { CurrentContext } from "../components/context/currentContext";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -15,7 +16,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <main>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <CurrentContext>
+          <Component {...pageProps} />
+        </CurrentContext>
       </main>
     </>
   );

@@ -4,6 +4,7 @@ import { Control, Controller } from "react-hook-form";
 type Props = {
   control: Control<any, any>;
   name: string;
+  label?: string;
   type?: string;
   placeholder?: string;
   defaultValue?: string;
@@ -13,6 +14,7 @@ type Props = {
 export const CTextField = ({
   control,
   name,
+  label,
   type,
   placeholder,
   defaultValue = "",
@@ -36,6 +38,7 @@ export const CTextField = ({
           <TextField
             {...field}
             placeholder={placeholder}
+            label={label}
             type={type}
             onChange={handleChange}
             sx={{

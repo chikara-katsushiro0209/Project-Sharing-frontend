@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { User } from "../../../types/user";
-import { fetchUser, UpdateUser } from "../../api/user";
+import { fetchUser, UpdateUser } from "../../../api/user";
 
 const Index = () => {
   const [user, setUser] = useState<User>({
@@ -36,7 +36,6 @@ const Index = () => {
   }, [id]);
 
   const userUpdate = () => {
-    console.log("test");
     UpdateUser(id, user.firstName, user.lastName)
       .then((data) => {
         console.log(data);
